@@ -9,6 +9,7 @@
   body {
    margin: 0;
    min-height: 100vh;
+   overflow-x: hidden;
    background: radial-gradient(circle at top, #1f2937 0%, #050816 60%);
    color: #e2e8f0;
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -97,10 +98,22 @@
   }
   .asset-card img {
    width: 100%;
+   max-width: 100%;
    height: auto;
    border-radius: 14px;
-   object-fit: cover;
+   object-fit: contain;
    border: 1px solid rgba(148, 163, 184, 0.14);
+   display: block;
+  }
+  img {
+   width: 100%;
+   max-width: 100%;
+   height: auto;
+   object-fit: contain;
+   border-radius: 16px;
+   margin: 18px 0;
+   border: 1px solid rgba(148, 163, 184, 0.14);
+   display: block;
   }
   .asset-card p {
    margin: 0;
