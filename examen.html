@@ -7,87 +7,232 @@
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
  <style>
   body {
-   padding: 20px;
-   line-height: 1.6;
-   background-color: #080a14;
-   color: #f1f5f9;
+   margin: 0;
+   min-height: 100vh;
+   background: radial-gradient(circle at top, #1f2937 0%, #050816 60%);
+   color: #e2e8f0;
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-  a {
-   color: #82c7ff;
-   text-decoration: none;
+  .page {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 24px;
   }
-  a:hover {
-   color: #c7d9ff;
+  .hero {
+   background: linear-gradient(135deg, rgba(56, 189, 248, 0.18), rgba(79, 70, 229, 0.18));
+   border: 1px solid rgba(148, 163, 184, 0.15);
+   border-radius: 28px;
+   padding: 32px;
+   box-shadow: 0 28px 80px rgba(15, 23, 42, 0.35);
+   margin-bottom: 28px;
+   text-align: center;
   }
-  h1, h2 {
+  .hero h1 {
+   margin-bottom: 12px;
+   font-size: 3rem;
+   letter-spacing: 0.02em;
+   color: #f8fafc;
+  }
+  .hero p {
+   color: #cbd5e1;
+   font-size: 1.05rem;
+  }
+  .actions {
+   display: flex;
+   justify-content: center;
+   gap: 16px;
+   flex-wrap: wrap;
+   margin-top: 22px;
+  }
+  .btn-primary,
+  .btn-secondary {
+   border-radius: 9999px;
+   padding: 12px 22px;
+   font-weight: 600;
+  }
+  .btn-secondary {
+   background: transparent;
+   border: 1px solid rgba(148, 163, 184, 0.4);
    color: #cbd5e1;
   }
   .section {
-   background: #111827;
-   border: 1px solid #334155;
-   border-radius: 14px;
-   padding: 20px;
+   background: rgba(15, 23, 42, 0.9);
+   border: 1px solid rgba(71, 85, 105, 0.3);
+   border-radius: 24px;
+   padding: 24px;
    margin-bottom: 24px;
+   backdrop-filter: blur(10px);
   }
-  .section img {
-   max-width: 100%;
-   border-radius: 10px;
-   margin-top: 12px;
+  .section-header {
+   display: flex;
+   align-items: center;
+   gap: 14px;
+   margin-bottom: 18px;
   }
-  .btn-primary {
-   background-color: #2563eb;
-   border-color: #2563eb;
+  .section-header h2 {
+   font-size: 1.8rem;
+   margin: 0;
+   color: #60a5fa;
+  }
+  .section p,
+  .section li {
+   color: #cbd5e1;
+   font-size: 1rem;
+   line-height: 1.8;
+  }
+  .asset-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+   gap: 18px;
+   margin-top: 16px;
+  }
+  .asset-card {
+   padding: 18px;
+   border-radius: 18px;
+   background: #0f172a;
+   border: 1px solid rgba(148, 163, 184, 0.12);
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+  }
+  .asset-card img {
+   width: 100%;
+   height: auto;
+   border-radius: 14px;
+   object-fit: cover;
+   border: 1px solid rgba(148, 163, 184, 0.14);
+  }
+  .asset-card p {
+   margin: 0;
+   color: #cbd5e1;
+   font-size: 0.95rem;
+  }
+  .split {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 20px;
+  }
+  .card {
+   background: #111827;
+   border-radius: 20px;
+   border: 1px solid rgba(99, 102, 241, 0.15);
+   padding: 22px;
+  }
+  .card h3 {
+   margin-top: 0;
+   color: #93c5fd;
+  }
+  .card p {
+   margin-bottom: 18px;
+   color: #cbd5e1;
+  }
+  .card img {
+   width: 100%;
+   border-radius: 16px;
+   border: 1px solid rgba(148, 163, 184, 0.12);
+  }
+  .video-wrap {
+   margin-top: 18px;
+   border-radius: 18px;
+   overflow: hidden;
+   border: 1px solid rgba(148, 163, 184, 0.2);
+   background: #020617;
+  }
+  .video-wrap video {
+   display: block;
+   width: 100%;
+   height: auto;
+  }
+  @media (max-width: 768px) {
+   .hero h1 {
+    font-size: 2.4rem;
+   }
   }
  </style>
 </head>
 <body>
- <div class="container">
-  <h1>Examen</h1>
-  <p>Este documento contiene el apartado de examen con las secciones solicitadas.</p>
-  <p><a href="index.html" class="btn btn-primary">Volver al índice</a></p>
-
-  <div class="section">
-   <h2>Links</h2>
-   <p>En este apartado de links se muestra el acceso a otras páginas y recursos relacionados al examen.</p>
-   <ul>
-    <li>Link al examen: <strong>Examen</strong></li>
-    <li>Assets y video al final de este documento.</li>
-   </ul>
-  </div>
-
-  <div class="section">
-   <h2>Assets</h2>
-   <p>Se incluyen los elementos visuales usados en el proyecto y una referencia de los assets principales.</p>
-   <p>Al final del documento se coloca el video de resultado.</p>
-  </div>
-
-  <div class="section">
-   <h2>NPC</h2>
-   <p>En este paso se agregó un NPC con modelo.</p>
-   <img src="./assets/ue5-hero.png.png" alt="NPC modelado" />
-  </div>
-
-  <div class="section">
-   <h2>Ilum</h2>
-   <p>Agregamos la iluminación del inicio.</p>
-  </div>
-
-  <div class="section">
-   <h2>Ilum2</h2>
-   <p>Pusimos esferas como lámparas que se activan mientras te mueves.</p>
-  </div>
-
-  <div class="section">
-   <h2>Resultado</h2>
-   <p>Este es el resultado del video final de la prueba.</p>
-   <div class="ratio ratio-16x9">
-    <video controls>
-     <source src="./assets/EXAMEN.mp4" type="video/mp4">
-     Tu navegador no soporta video HTML5.
-    </video>
+ <div class="page">
+  <header class="hero">
+   <span class="badge bg-primary text-white px-3 py-2 rounded-pill">Examen</span>
+   <h1>Documento del examen</h1>
+   <p>Sección dedicada al examen con los assets del examen y una navegación clara para volver al proyecto principal.</p>
+   <div class="actions">
+    <a href="index.html" class="btn btn-primary">Volver al índice</a>
+    <a href="#" onclick="history.back(); return false;" class="btn btn-secondary">Volver a la página anterior</a>
    </div>
-  </div>
+  </header>
+
+  <main>
+   <section class="section">
+    <div class="section-header">
+     <h2>Links</h2>
+    </div>
+    <p>En este apartado de links se muestra el acceso a otras páginas y recursos relacionados al examen.</p>
+    <ul>
+     <li>Link al examen: <strong>Examen</strong></li>
+     <li>Assets y video al final de este documento.</li>
+    </ul>
+   </section>
+
+   <section class="section">
+    <div class="section-header">
+     <h2>Assets</h2>
+    </div>
+    <p>Se incluyen los elementos visuales usados en el proyecto y una referencia de los assets principales.</p>
+    <div class="asset-grid">
+     <div class="asset-card">
+      <img src="./Asets examen/WIDGE.png" alt="Asset WIDGE">
+      <p>Asset principal del examen.</p>
+     </div>
+     <div class="asset-card">
+      <img src="./Asets examen/ILUM.png" alt="Asset Iluminación inicial">
+      <p>Asset de la iluminación inicial.</p>
+     </div>
+     <div class="asset-card">
+      <img src="./Asets examen/ILUM2.png" alt="Asset iluminación con esferas">
+      <p>Asset de las esferas-lámparas que se activan al moverse.</p>
+     </div>
+     <div class="asset-card">
+      <img src="./Asets examen/AGREGAR NPC.png" alt="Asset NPC modelado">
+      <p>Asset del NPC modelado.</p>
+     </div>
+    </div>
+   </section>
+
+   <section class="section">
+    <div class="section-header">
+     <h2>NPC</h2>
+    </div>
+    <p>En este paso se agregó un NPC con modelo.</p>
+    <img src="./Asets examen/AGREGAR NPC.png" alt="NPC modelado">
+   </section>
+
+   <section class="section split">
+    <div class="card">
+     <h3>Ilum</h3>
+     <p>Agregamos la iluminación del inicio.</p>
+     <img src="./Asets examen/ILUM.png" alt="Iluminación inicial">
+    </div>
+    <div class="card">
+     <h3>Ilum2</h3>
+     <p>Pusimos esferas como lámparas que se activan mientras te mueves.</p>
+     <img src="./Asets examen/ILUM2.png" alt="Esferas lámparas">
+    </div>
+   </section>
+
+   <section class="section">
+    <div class="section-header">
+     <h2>Resultado</h2>
+    </div>
+    <p>Este es el resultado final en video.</p>
+    <div class="video-wrap">
+     <video controls>
+      <source src="./Asets examen/EXAMEN VIDEO.mp4" type="video/mp4">
+      Tu navegador no soporta video HTML5.
+     </video>
+    </div>
+   </section>
+  </main>
  </div>
 </body>
 </html>
